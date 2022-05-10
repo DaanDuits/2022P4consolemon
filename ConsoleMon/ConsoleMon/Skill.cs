@@ -12,10 +12,21 @@ namespace ConsoleMon
         public int energyCost;
         public string name;
 
+        public Elements element;
+
         void UseOn(ConsoleMon target, ConsoleMon caster)
         {
             caster.DeleteEnergy(energyCost);
             target.TakeDamage(damage);
+        }
+        public enum Elements
+        {
+            fire,
+            poison,
+            dark,
+            electric,
+            grass,
+            water
         }
     }
 }

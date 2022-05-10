@@ -12,6 +12,10 @@ namespace ConsoleMon
         public int energy;
         public string name;
 
+        public List<Skill> skills;
+
+        public Skill.Elements weakness;
+
         public void TakeDamage(int damage)
         {
             health -= damage;
