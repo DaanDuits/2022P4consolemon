@@ -24,5 +24,22 @@ namespace ConsoleMon
         {
             this.energy -= energy;
         }
+
+        internal ConsoleMon()
+        {
+            
+        }
+
+        internal ConsoleMon(ConsoleMon copyFrom)
+        {
+            this.health = copyFrom.health;
+            this.energy = copyFrom.energy; 
+            this.name = copyFrom.name;
+            foreach(Skill skill in copyFrom.skills)
+            {
+                this.skills.Add(new Skill(skill));
+            }
+            this.weakness = copyFrom.weakness;
+        }
     }
 }

@@ -28,5 +28,16 @@ namespace ConsoleMon
             grass,
             water
         }
+        internal Skill()
+        {
+
+        }
+        internal Skill(Skill other)
+        {
+            this.damage = other.damage;
+            this.energyCost = other.energyCost;
+            this.name = other.name;
+            this.element = other.element;
+        }
     }
 }
